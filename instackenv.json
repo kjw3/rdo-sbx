@@ -1,0 +1,124 @@
+{
+    "nodes": [
+        {
+            "name": "sbx0",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:c7:80:56",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.30",
+            "capabilities": "profile:control,boot_option:local"
+        },
+        {
+            "name": "sbx1",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:90:dc:40",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.31",
+            "capabilities": "profile:control,boot_option:local"
+        },
+        {
+            "name": "sbx2",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:cf:89:a8",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.32",
+            "capabilities": "profile:control,boot_option:local"
+        },
+        {
+            "name": "sbx3",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:90:25:4c",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.33",
+            "capabilities": "profile:compute,boot_option:local"
+        },
+        {
+            "name": "sbx4",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:90:61:88",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.34",
+            "capabilities": "profile:compute,boot_option:local"
+        },
+        {
+            "name": "sbx5",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:cf:2e:ac",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.35",
+            "capabilities": "profile:osdcompute,boot_option:local"
+        },
+        {
+            "name": "sbx6",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:90:61:4a",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.36",
+            "capabilities": "profile:osdcompute,boot_option:local"
+        },
+        {
+            "name": "sbx7",
+            "pm_type": "ipmi",
+            "ports": [
+                {
+                    "address": "0c:c4:7a:90:dd:3e",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "arch": "x86_64",
+            "pm_user": "ADMIN",
+            "pm_password": "ADMIN",
+            "pm_addr": "10.100.0.37",
+            "capabilities": "profile:osdcompute,boot_option:local"
+        }
+    ]
+}
