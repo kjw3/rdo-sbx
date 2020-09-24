@@ -83,7 +83,7 @@ neutron router-interface-add router-$externalNetwork ${tenantNetwork}-sub
 neutron router-gateway-set router-$externalNetwork $externalNetwork
 
 mkdir -p /home/stack/overcloud_guest_images
-curl http://download.cirros-cloud.net/0.5.1/cirros-0.5.1-x86_64-disk.img -o /home/stack/overcloud_guest_images/cirros-0.5.1-x86_64-disk.img
+curl https://content.kdjlab.com/public/cirros-0.5.1-x86_64-disk.img -o /home/stack/overcloud_guest_images/cirros-0.5.1-x86_64-disk.img
 curl https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2 -o /home/stack/overcloud_guest_images/CentOS-7-x86_64-GenericCloud.qcow2
 curl https://cloud.centos.org/centos/8/x86_64/images/CentOS-8-GenericCloud-8.2.2004-20200611.2.x86_64.qcow2 -o /home/stack/overcloud_guest_images/CentOS-8-GenericCloud-8.2.2004-20200611.2.x86_64.qcow2
 curl http://mirror.siena.edu/fedora/linux/releases/32/Cloud/x86_64/images/Fedora-Cloud-Base-32-1.6.x86_64.qcow2 -o /home/stack/overcloud_guest_images/Fedora-Cloud-Base-32-1.6.x86_64.qcow2
@@ -97,6 +97,4 @@ openstack image create --container-format bare --disk-format qcow2 --min-disk 10
 openstack image create --container-format bare --disk-format qcow2 --min-disk 10 --min-ram 2048 --file /home/stack/overcloud_guest_images/Fedora-Cloud-Base-32-1.6.x86_64.qcow2 --public fedora-32
 openstack image create --container-format bare --disk-format qcow2 --min-disk 10 --min-ram 2048 --file /home/stack/overcloud_guest_images/ubuntu-18.04-server-cloudimg-amd64.img --public ubuntu-18.04
 openstack image create --container-format bare --disk-format qcow2 --min-disk 10 --min-ram 2048 --file /home/stack/overcloud_guest_images/ubuntu-20.04-server-cloudimg-amd64.img --public ubuntu-20.04
-
-
 
