@@ -1,0 +1,27 @@
+# Environment file to deploy the HA services via docker
+# Add it *after* -e docker.yaml:
+# ...deploy..-e docker.yaml -e docker-ha.yaml
+resource_registry:
+  # Pacemaker runs on the host
+  # FIXME(bogdando): switch it, once it is containerized
+  OS::TripleO::Services::Pacemaker: /usr/share/openstack-tripleo-heat-templates/deployment/pacemaker/pacemaker-baremetal-puppet.yaml
+  # FIXME(bogdando): switch it, once it is containerized
+  OS::TripleO::Services::PacemakerRemote: /usr/share/openstack-tripleo-heat-templates/deployment/pacemaker/pacemaker-remote-baremetal-puppet.yaml
+  OS::TripleO::Tasks::ControllerPreConfig: OS::Heat::None
+  OS::TripleO::Tasks::ControllerPostConfig: OS::Heat::None
+
+  # Services that are disabled for HA deployments with pacemaker
+  OS::TripleO::Services::Keepalived: OS::Heat::None
+
+  # HA Containers managed by pacemaker
+  OS::TripleO::Services::CinderVolume: /usr/share/openstack-tripleo-heat-templates/deployment/cinder/cinder-volume-pacemaker-puppet.yaml
+  OS::TripleO::Services::Clustercheck: /usr/share/openstack-tripleo-heat-templates/deployment/pacemaker/clustercheck-container-puppet.yaml
+  OS::TripleO::Services::HAproxy: /usr/share/openstack-tripleo-heat-templates/deployment/haproxy/haproxy-pacemaker-puppet.yaml
+  OS::TripleO::Services::MySQL: /usr/share/openstack-tripleo-heat-templates/deployment/database/mysql-pacemaker-puppet.yaml
+  OS::TripleO::Services::OsloMessagingRpc: /usr/share/openstack-tripleo-heat-templates/deployment/rabbitmq/rabbitmq-messaging-rpc-pacemaker-puppet.yaml
+  OS::TripleO::Services::OsloMessagingNotify: /usr/share/openstack-tripleo-heat-templates/deployment/rabbitmq/rabbitmq-messaging-notify-shared-puppet.yaml
+  OS::TripleO::Services::Redis: /usr/share/openstack-tripleo-heat-templates/deployment/database/redis-pacemaker-puppet.yaml
+  OS::TripleO::Services::OVNDBs: /usr/share/openstack-tripleo-heat-templates/deployment/ovn/ovn-dbs-pacemaker-puppet.yaml
+
+parameter_defaults:
+  ClusterCommonTag: true

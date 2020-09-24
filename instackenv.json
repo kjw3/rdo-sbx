@@ -88,7 +88,7 @@
             "pm_user": "ADMIN",
             "pm_password": "ADMIN",
             "pm_addr": "10.100.0.35",
-            "capabilities": "profile:osdcompute,boot_option:local"
+            "capabilities": "profile:computeHCI,boot_option:local"
         },
         {
             "name": "sbx6",
@@ -103,7 +103,7 @@
             "pm_user": "ADMIN",
             "pm_password": "ADMIN",
             "pm_addr": "10.100.0.36",
-            "capabilities": "profile:osdcompute,boot_option:local"
+            "capabilities": "profile:computeHCI,boot_option:local"
         },
         {
             "name": "sbx7",
@@ -118,7 +118,7 @@
             "pm_user": "ADMIN",
             "pm_password": "ADMIN",
             "pm_addr": "10.100.0.37",
-            "capabilities": "profile:osdcompute,boot_option:local"
+            "capabilities": "profile:computeHCI,boot_option:local"
         }
     ]
 }

@@ -1,0 +1,38 @@
+# *******************************************************************
+# This file was created automatically by the sample environment
+# generator. Developers should use `tox -e genconfig` to update it.
+# Users are recommended to make changes to a copy of the file instead
+# of the original, if any customizations are needed.
+# *******************************************************************
+# title: Inject SSL Trust Anchor on Overcloud Nodes
+# description: |
+#   When using an SSL certificate signed by a CA that is not in the default
+#   list of CAs, this environment allows adding a custom CA certificate to
+#   the overcloud nodes.
+parameter_defaults:
+  # Map containing the CA certs and information needed for deploying them.
+  # Type: json
+  CAMap:
+    undercloud-ca:
+      content: |
+        -----BEGIN CERTIFICATE-----
+        MIIDezCCAmOgAwIBAgIRAK98LX9ilEeErt9uL62vV6IwDQYJKoZIhvcNAQELBQAw
+        UDEgMB4GA1UEAwwXTG9jYWwgU2lnbmluZyBBdXRob3JpdHkxLDAqBgNVBAMMI2Fm
+        N2MyZDdmLTYyOTQ0Nzg0LWFlZGY2ZTJmLWFkYWY1N2ExMB4XDTIwMDkxNzE0NTQx
+        MVoXDTIxMDkxNzE0NTQxMFowFTETMBEGA1UEAxMKMTAuMTAwLjQuNzCCASIwDQYJ
+        KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ6A00U6YRX8oQ1TZox8lKDIS5mLhIMl
+        LzyR+3xDiVNCd/Dc1Dy/hwHGWxrUFKbMDNv6uGE0MOvYMn7kKNfXfVJY2Bl8GZ/f
+        5oV2DBaRGt/ZNRRz/ViSvCLgDofnLt5xXk1EDZPWyxtswDaYDik7ettWVq5zS5Jw
+        aBuxpXik0TLGrjRjqjSO6KjdG8VyWpci9c+xFfvrBTcjqYfluBhAesg47EmjsOOZ
+        WhcN8odDZc1bofxb9D92M9ME1eG3Zn8ogcZ/eWKCpw/USYrKm5qMoO0Pmi67Thsn
+        JVgfX/qral8TfqBS9/p6IEmW6l4/LBYZ1dgiGV+e4pWccBZJ5VJ5pqsCAwEAAaOB
+        ijCBhzASBgNVHREBAQAECDAGhwQKZAQHMCAGA1UdJQEBAAQWMBQGCCsGAQUFBwMC
+        BggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMCAGA1UdDgEBAAQWBBQkS34kGJLD8EPB
+        CZKfeovIBgofSjAfBgNVHSMEGDAWgBStOcJfVbcbekrbaw9CRRetojY5tzANBgkq
+        hkiG9w0BAQsFAAOCAQEAVe4fEiFkfv7clV8SER4VVvK/LDGZMNgO6FxkUH4ekvUT
+        DPjGWLg6MTjaAsvz2tENu2xS6e357omdfBhxB7uifx0iG8tnVAgH9GIEDBE2VZsW
+        RVvlwDAavexbiWl8O8RYQZ4IPmHCYeYBVunX6/k/ggcOgxO4okfSDXb7+dRat5sp
+        HpimOdRU5h2bM1bSG/Pb1L1iK9iLDFmxX2dDS7pJI86cVq+KyEKB75nyGnJkZ7Su
+        eVIwC0gHlkc6oYm2xhvIXo2HE63QtT0aRR/rCnQf+YUc4bM3kGGpJKB5945tR1j6
+        9B/5sT31o5NYW+5bF8FPVKbQYoLVbja49CNZDy04Xw==
+        -----END CERTIFICATE-----

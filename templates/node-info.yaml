@@ -1,0 +1,24 @@
+parameter_defaults:
+  ControllerCount: 3
+  OvercloudControllerFlavor: control
+  ComputeCount: 2
+  OvercloudComputeFlavor: compute
+  CephStorageCount: 0
+  OvercloudCephStorageFlavor: ceph-storage
+  OvercloudComputeHCIFlavor: computeHCI
+  ComputeHCICount: 3
+  #Other Params
+  NovaComputeLibvirtType: kvm
+  NtpServer: 10.99.99.1
+  AdminPassword: p@ssw0rd
+  CephAnsiblePlaybookVerbosity: 1
+  NeutronDhcpAgentDnsmasqDnsServers: ['10.99.99.12','1.1.1.1']
+  CloudName: openstack.kdjlab.com
+  CloudDomain: kdjlab.com
+  TimeZone: 'US/Eastern'
+  ComputeHCIParameters:
+    NovaReservedHostMemory: 2048
+    NovaCPUAllocationRatio: 16.0
+  ComputeParameters:
+    NovaReservedHostMemory: 2048
+    NovaCPUAllocationRatio: 16.0
