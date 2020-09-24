@@ -7,7 +7,7 @@ This deployment will apply to both RDO and Red Hat OpenStack Platform (RHOSP). T
 
 The associated articles can be found at:
 - [Deploying RDO OpenStack in a Cohesive Manner. Part 1: Undercloud Deployment and Node Preparation](https://kdjlab.com/deploying-rdo-in-a-cohesive-manner/)
-- []()
+- [Deploying RDO OpenStack in a Cohesive Manner. Part 2: Overcloud Deployment](https://kdjlab.com/deploying-rdo-openstack-in-a-cohesive-manner-part-2-overcloud-deployment/)
 
 ## Repository Layout
 
