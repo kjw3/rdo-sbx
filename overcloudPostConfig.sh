@@ -61,7 +61,7 @@ openstack flavor create --id 5 --ram 16384 --disk 80 --vcpus 8 --public m1.xlarg
 #Create shared external network
 
 #External is VLAN
-openstack network create --provider-network-type vlan --provider-physical-network datacentre --provider-segment $externalVlanId --share --external $externalNetwork
+openstack network create --provider-network-type vlan --provider-physical-network datacentre --provider-segment $externalVlanId --external $externalNetwork
 
 #External is Flat
 #openstack network create --provider-network-type flat --provider-physical-network datacentre --external $externalNetwork
